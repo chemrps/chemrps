@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxbuttongroup.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxfileupload.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdata.js"></script>
+    <!--<script type="text/javascript" src="jqwidgets/jqxdraw.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/jqxbargauge.js"></script>-->
+
+    <!--<script type="text/javascript" src="jqwidgets/jqxexpander.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/jqxgauge.js"></script>-->
+
+
+    <!--<script type="text/javascript" src="jqwidgets/jqxknob.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/jqxnumberinput.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/jqxslider.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/jqxnavbar.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>-->
+    <!--<script type="text/javascript" src="jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxbulletchart.js"></script>-->
+    <script type="text/javascript" src="jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxloader.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.js"></script>
+
+
+    <script type="text/javascript" src="jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.grouping.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.columnsreorder.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="scripts/demos.js"></script>
+
+
+    <script type="text/javascript" src="registersdfile.js"></script>
+    <!--<style>
+
+        .row {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            border: 1px solid red;
+        }
+
+
+    </style>-->
+
+    <style>
+
+        .validationresultswindow-button-group {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+
+
+    <style>
+
+        .sdfilefieldnameswindow-button-group {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    </style>
+
+    <style>
+
+
+
+        .row {
+            width: 100%;
+            /*height: 50px;*/
+            /*width: 100%;
+            display: flex;
+            flex-direction: row;*/
+            display: table;
+            /*text-align: center;*/
+            /*background-color: red;*/
+        }
+
+        .block1 {
+            display: table-cell;
+            vertical-align: middle;
+            /*width: 574px;*/
+            /*height: 129px;*/
+        }
+
+        .block2 {
+            /*width: 100%;*/
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            float: right;
+            /*text-align: center;*/
+            /*height: 129px;*/
+            /*border: 1px solid red;*/
+            /*padding: 35px;*/
+        }
+
+        .block3 {
+            /*width: 100%;*/
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            float: right;
+            /*text-align: center;*/
+            /*height: 129px;*/
+            /*border: 1px solid red;*/
+            /*padding: 35px;*/
+        }
+
+        .block4 {
+            /*width: 100%;*/
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            float: right;
+            /*text-align: center;*/
+            /*height: 129px;*/
+            /*border: 1px solid red;*/
+            /*padding: 35px;*/
+        }
+    </style>
+
+    <style>
+
+
+
+        /*.row {
+            height: 129px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }*/
+
+
+
+        /*.block1 {
+            width: 574px;
+            height: 129px;
+        }
+
+        .block2 {
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+
+            padding: 35px;
+        }*/
+    </style>
+    <!--<style>
+
+
+
+        div.img-container {
+            width: 600px;
+            height: 150px;
+            position: relative;
+            margin-left: 10px;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        img.cropped {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>-->
+    <style>
+
+
+        .jqx-chart-label-text {
+            font-size: 25px;
+        }
+
+        .jqx-chart-title-text {
+            font-family: "'Helvetica Neue', 'Arial'" !important;
+            font-size: 30px !important;
+            font-style: normal !important;
+        }
+
+
+        .jqx-chart-axis-text {
+            font-size: 16px !important;
+        }
+    </style>
+    <style>
+
+
+
+
+
+        .wrapper {
+            height: 100vh;
+            display: flex;
+            /* Direction of the items, can be row or column */
+            flex-direction: column;
+        }
+
+        header {
+            /*height: 129px;*/
+        }
+
+
+        /*footer {
+            height: 180px;
+        }*/
+
+        main {
+            flex: 1;
+            
+
+
+        }
+    </style>
+    <!--<style>
+
+        .container {
+            display: flex;
+        }
+    </style>-->
+    <!--<style>
+
+
+
+
+
+        .header {
+            border: thin;
+            border-style: solid;
+
+        }
+    </style>-->
+    <!--<style>
+
+
+
+
+
+        .footer {
+            border: thin;
+            border-style: solid;
+
+        }
+    </style>-->
+</head>
+<body id="body">
+    <div id="jqxLoader"></div>
+    <div id="sdfilefieldnameswindow">
+        <div><span>Pick compound ID field</span></div>
+        <div style="overflow: hidden;">
+            <div>
+                <div id='sdfilefieldnameswindowlistbox'></div>
+            </div>
+            <div style="float: right; margin-top: 2px;">
+                <input type="button" value="OK" id="btn_sdfilefieldnameswindow_OK" style="margin-right: 2px"/>
+                <input type="button" value="Cancel" id="btn_sdfilefieldnameswindow_CANCEL" />
+                
+            </div>
+
+            <!--
+            <div id='sdfilefieldnameswindowbuttongroup' class="sdfilefieldnameswindow-button-group">
+
+
+
+
+                <button style="padding:4px 16px;" id="OK">
+                    OK
+                </button>
+                <button style="padding:4px 16px;" id="Cancel">
+                    Cancel
+                </button>
+
+
+
+
+
+            </div>
+            -->
+
+
+
+
+
+
+
+
+
+
+
+            <!--<table style="background-color: aqua">
+
+                <tr>
+                    <td align="right"> </td>
+                    <td style="padding-top: 10px;" align="right"> <input id="sdfilefieldnameswindowcancelbtn" type="button" value="Cancel" / > <input style="margin-right: 5px;" type="button" id="sdfilefieldnameswindowokbtn" value="OK" / > </td>
+                </tr>
+            </table>-->
+        </div>
+    </div>
+
+
+    <!--<div id="registrationmessageswindow">
+        <div><span>Registration messages</span></div>
+        <div style="overflow: hidden;">
+            <div id="windowContent" style="height: 100%;overflow: scroll; white-space:pre"></div>
+        </div>
+    </div>-->
+
+    <div id="registrationresultswindow">
+        <div></div>
+        <div style="overflow: hidden;">
+            <!--<div id="windowContent" style="height: 100%;overflow: scroll; white-space:pre"></div>-->
+            <div id="registrationresultswindowgrid"></div>
+        </div>
+    </div>
+
+    <div id="validationresultswindow">
+        <div></div>
+        <div style="overflow: hidden;">
+            <!--<div id="windowContent" style="height: 100%;overflow: scroll; white-space:pre"></div>-->
+            <div id="validationresultswindowgrid"></div>
+            <center>
+
+
+                Errors found in validation. Are you sure you want to continue?
+
+
+
+                <div id='validationresultswindowbuttongroup' class="validationresultswindow-button-group">
+
+
+                    
+
+                        <button style="padding:4px 16px;" id="Continue">
+                            Continue
+                        </button>
+                        <button style="padding:4px 16px;" id="Cancel">
+                            Cancel
+                        </button>
+
+                    
+
+
+
+                </div>
+
+
+
+
+
+
+            </center>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="wrapper">
+        <header class="row">
+            <div class="block1"><img src="chemrps_logo_blue.jpg" style="height: 60px"></div>
+            <div class="block4"><img src="small_logo_akc.png"></div>
+            <div class="block3">
+                Phone: +49 7627 970068<br>
+                E-mail: isciencesearch@iScienceSearch.com<br>
+                Homepage: <a href="http://www.iScienceSearch.com" target="_blank">www.iScienceSearch.com</a>
+
+
+            </div>
+            <div class="block2">
+                Dr. Alexander Kos<br>
+                Austr. 26<br>
+                D-79585 Steinen, Germany
+            </div>
+
+            <!--<div class="row" style="background-color:hotpink">
+        <img src="chemrps_logo.png">
+        <label style="font-size: 40px;">Demo SDFile registration page</label>
+
+    </div>-->
+            <!--<div class="row">
+        <div class="block1"><img src="chemrps_logo_blue.jpg"></div>
+
+        <label class="block2" style="font-size: 40px;">Demo SDFile registration page</label>
+    </div>-->
+
+
+        </header>
+        <!--<header class="header"><div><div class='row'><div class="img-container"><img src="chemrps_logo.png" class="cropped"></div><div></div></div></header>-->
+        <main style="margin-top: 2px">
+            <div style="width: 100%;border-width: 1px;border-style:solid;">
+                <label for="jqxFileUpload" id="jqxFileUploadlabel" style="height: 100%"></label>
+                <div id="jqxFileUpload"></div>
+            </div>
+            <div style="width: 100%;border-width: 1px;border-style:solid;margin-top: 5px" id="chartcontainer">
+                <!--<center><div id="barGaugenumberofsdfilerecords" style="width: 100%; margin-top: 3px;"></div></center>-->
+                <!--<center><label style="font-size: 30px">Number of SDFile records found:</label><div id="barGaugenumberofsdfilerecords" style="width: 100%; height: 50px; margin-left: 2px; margin-top: 3px;"></div></center>-->
+                <!--<center><label style="font-size: 30px">Number of SDFile records found:<input type="text" id="barGaugenumberofsdfilerecords"></label></center>-->
+
+                <center><div style="font-size: 30px" id="numberofsdfilerecords"></div></center>
+
+                <center><div id="chartContainervalidationresults" style="width: 100%; height: 150px; margin-top: 3px;"></div></center>
+                <center><div id="chartContainerregistrationresults" style="width: 100%; height: 150px; margin-top: 3px;"></div></center>
+            </div>
+            <div style="margin-top: 5px">
+
+                <a href="http://168.63.97.158:8080/index.html" target="_blank" style="font-size: 40px;">Open ChemRPS search page</a>
+
+            </div>
+
+
+        </main>
+        <!--<footer class="footer" id="footer">FOOTER</footer>-->
+    </div>
+</body>
+</html>

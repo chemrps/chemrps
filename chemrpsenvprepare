@@ -1,0 +1,13 @@
+cp -p .env ./api/.env
+
+cp -p .env ./bulksdfileloadconsole/.env
+
+
+
+cp -p .env ./web/.env
+
+cp -p .env ./php/.env
+
+cp -p .env ./database/.env
+
+

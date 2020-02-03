@@ -1,0 +1,1 @@
+docker-compose -f ./chemrps.yml down

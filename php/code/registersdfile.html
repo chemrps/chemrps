@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxbuttongroup.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxfileupload.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdata.js"></script>
+    
+    <script type="text/javascript" src="jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxloader.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.js"></script>
+
+
+    <script type="text/javascript" src="jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.grouping.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.columnsreorder.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="scripts/demos.js"></script>
+
+
+    <script type="text/javascript" src="registersdfile.js"></script>
+    
+
+    <style>
+
+        .validationresultswindow-button-group {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+
+
+    <style>
+
+        .sdfilefieldnameswindow-button-group {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    </style>
+
+    <style>
+
+
+
+        .row {
+            width: 100%;
+            
+            display: table;
+            
+        }
+
+        .block1 {
+            display: table-cell;
+            vertical-align: middle;
+            
+        }
+
+        .block2 {
+           
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            float: right;
+            
+        }
+
+        .block3 {
+            
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            float: right;
+            
+        }
+
+        .block4 {
+            
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            float: right;
+            
+        }
+    </style>
+
+    
+    <style>
+
+
+        .jqx-chart-label-text {
+            font-size: 25px;
+        }
+
+        .jqx-chart-title-text {
+            font-family: "'Helvetica Neue', 'Arial'" !important;
+            font-size: 30px !important;
+            font-style: normal !important;
+        }
+
+
+        .jqx-chart-axis-text {
+            font-size: 16px !important;
+        }
+    </style>
+    <style>
+
+
+
+
+
+        .wrapper {
+            height: 100vh;
+            display: flex;
+            
+            flex-direction: column;
+        }
+
+        header {
+            
+        }
+
+
+        
+
+        main {
+            flex: 1;
+            
+
+
+        }
+    </style>
+    
+</head>
+<body id="body">
+    <div id="jqxLoader"></div>
+    <div id="sdfilefieldnameswindow">
+        <div><span>Pick compound ID field</span></div>
+        <div style="overflow: hidden;">
+            <div>
+                <div id='sdfilefieldnameswindowlistbox'></div>
+            </div>
+
+            <div style="float: right; margin-top: 2px;">
+
+                <input type="button" value="OK" id="btn_sdfilefieldnameswindow_OK" style="margin-right: 2px" />
+                <input type="button" value="Cancel" id="btn_sdfilefieldnameswindow_CANCEL" />
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <div id="registrationresultswindow">
+        <div></div>
+        <div style="overflow: hidden;">
+            
+            <div id="registrationresultswindowgrid"></div>
+        </div>
+    </div>
+
+    <div id="validationresultswindow">
+        <div></div>
+        <div style="overflow: hidden;">
+            
+            <div id="validationresultswindowgrid"></div>
+            <center>
+
+
+                Errors found in validation. Are you sure you want to continue?
+
+
+
+                <div id='validationresultswindowbuttongroup' class="validationresultswindow-button-group">
+
+
+                    
+
+                        <button style="padding:4px 16px;" id="Continue">
+                            Continue
+                        </button>
+                        <button style="padding:4px 16px;" id="Cancel">
+                            Cancel
+                        </button>
+
+                    
+
+
+
+                </div>
+
+
+
+
+
+
+            </center>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="wrapper">
+        <header class="row">
+            <div class="block1"><img src="chemrps_logo_blue.jpg" style="height: 60px"></div>
+            <div class="block4"><img src="small_logo_akc.png"></div>
+            <div class="block3">
+                Phone: +49 7627 970068<br>
+                E-mail: isciencesearch@iScienceSearch.com<br>
+                Homepage: <a href="http://www.iScienceSearch.com" target="_blank">www.iScienceSearch.com</a>
+
+
+            </div>
+            <div class="block2">
+                Dr. Alexander Kos<br>
+                Austr. 26<br>
+                D-79585 Steinen, Germany
+            </div>
+
+            
+
+
+        </header>
+        
+        <main style="margin-top: 2px">
+            <div style="width: 100%;border-width: 1px;border-style:solid;">
+                <label for="jqxFileUpload" id="jqxFileUploadlabel" style="height: 100%"></label>
+                <div id="jqxFileUpload"></div>
+            </div>
+            <div style="width: 100%;border-width: 1px;border-style:solid;margin-top: 5px" id="chartcontainer">
+                
+
+                <center><div style="font-size: 30px" id="numberofsdfilerecords"></div></center>
+
+                <center><div id="chartContainervalidationresults" style="width: 100%; height: 150px; margin-top: 3px;"></div></center>
+                <center><div id="chartContainerregistrationresults" style="width: 100%; height: 150px; margin-top: 3px;"></div></center>
+            </div>
+            <div style="margin-top: 5px">
+
+                <a href="http://SERVERNAME:WEBPORT/index.html" target="_blank" style="font-size: 40px;">Open ChemRPS search page</a>
+
+            </div>
+
+
+        </main>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+docker-compose -f ./chemrpsbulksdfileloadconsole.yml  build

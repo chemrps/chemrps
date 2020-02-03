@@ -1,0 +1,24 @@
+CREATE USER system_admin WITH SUPERUSER encrypted password 'T0matoezzz';
+
+	CREATE ROLE proteax_user;
+
+	CREATE USER bcf_auth WITH  CREATEROLE encrypted password 'T0matoezzz_bcfreg';
+
+	CREATE USER bcf_authenticator WITH encrypted password 'T0matoezzz_bcfreg';
+
+	CREATE USER bcf_reg WITH encrypted password 'T0matoezzz_bcfreg';
+	GRANT proteax_user TO bcf_reg;
+
+	CREATE USER bcf_reg_facade WITH encrypted password 'T0matoezzz_bcfreg';
+	GRANT proteax_user TO bcf_reg_facade;
+
+	CREATE ROLE bcf_reg_viewer;
+
+	CREATE ROLE bcf_reg_editor;
+	GRANT bcf_reg_viewer TO bcf_reg_editor;
+
+	CREATE ROLE bcf_reg_admin;
+	GRANT bcf_reg_editor TO bcf_reg_admin;
+
+	CREATE ROLE bcf_reg_dba;
+	GRANT bcf_reg_admin TO bcf_reg_dba;
