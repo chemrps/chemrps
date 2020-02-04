@@ -72,7 +72,7 @@ sudo yum install git
 When git installed correctly
 Clone the chemrps repository
 
-git clone https://github.com/chemrps-dev/chemrps.git chemrps
+git clone https://github.com/chemrps/chemrps.git chemrps
 
 Then, change into the newly created directory
 
@@ -106,7 +106,7 @@ Windows:
 
 Download chemrps installer files
 Open the following github link
-https://github.com/chemrps-dev/chemrps
+https://github.com/chemrps/chemrps
 Download repository to your local computer
 
 After the download completed, unpack the archive to a local folder on your host computer
