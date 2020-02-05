@@ -3,13 +3,12 @@
 
 
 
-$target_dir = "SDFILEUPLOADFOLDER";
-//$target_dir = "/usr/share/nginx/html/sdfileuploads/";
-//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_dir = "sdfileuploads/";
+
 
 $uniquesavename=time().uniqid(rand()).'.sdf';
 
-//$uniquesavename='test.sdf';
+
 
 $target_file = $target_dir . $uniquesavename;
 
@@ -50,35 +49,7 @@ if( strpos(file_get_contents($tmpfilename),$_GET['$$$$']) !== false) {
     
 } 
 
-//$file = file_get_contents($target_file);
-//echo $file;
 
-//$type = $_FILES["fileToUpload"]['type']; // get the type of the file
-
-//if( strpos(file_get_contents($target_file),$_GET['$$$$']) !== false) {
-        // do stuff
-
-//		echo "This is not a valid SDFile.";
-//        $uploadOk = 0;
-    
-//}
-
-
-// Check file size
-
-// ADJUST filesize for final
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-
-// Allow certain file formats
-// MAY BE IMPLEMENT THIS
-//if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-//&& $imageFileType != "gif" ) {
-//    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-//    $uploadOk = 0;
-//}
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     

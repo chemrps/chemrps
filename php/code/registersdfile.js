@@ -923,7 +923,7 @@ $(document).ready(function () {
 
 
 
-    var jqxFileUploadlabeltext = "Please click the 'Browse' button to select the SDFile you want to register.\n\nNote: Upload files must have extension .sdf, must be of type text, maximum filesize is 500KB. Only up to 100 SDFile records will be registered.";
+    var jqxFileUploadlabeltext = "Please click the 'Browse' button to select the SDFile you want to register.\n\nNote: Upload files must have extension .sdf and must be of type text.";
 
     jqxFileUploadlabeltext = jqxFileUploadlabeltext.replace(/\n/g, '<br/>');
 
@@ -995,23 +995,7 @@ $(document).ready(function () {
                     $('#jqxFileUpload').jqxFileUpload('cancelAll');
 
 
-                } else {
-
-                    if (fileSize > 500000) {
-
-
-                        alert("File is too big. Max size 500KB");
-
-                        $('#jqxFileUpload').jqxFileUpload('cancelAll');
-
-                    } else {
-
-                        
-                        
-
-                    }
-
-                }
+                } 
 
 
 
@@ -1209,13 +1193,7 @@ $(document).ready(function () {
                                     numberofsdfilerecords = response.numberofsdfilerecordsfound;
 
 
-                                    if (numberofsdfilerecords > 100) {
-
-
-                                        alert("Found " + numberofsdfilerecords + " SDFile records. Only first 100 records will be registered");
-
-
-                                    }
+                                    
 
 
 
