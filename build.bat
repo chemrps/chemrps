@@ -1,11 +1,11 @@
 
 
-copy .env chemrpsapi /Y
+copy .env api /Y
+
+copy .env bulksdfileloadconsole /Y
 
 
-
-
-copy .env chemrpsweb /Y
+copy .env web /Y
 
 copy .env database /Y
 
