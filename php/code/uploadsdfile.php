@@ -3,7 +3,7 @@
 
 
 
-$target_dir = "sdfileuploads/";
+$target_dir = "SDFILEUPLOADFOLDER";
 
 
 $uniquesavename=time().uniqid(rand()).'.sdf';
