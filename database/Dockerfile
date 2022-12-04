@@ -33,7 +33,7 @@ ENV PGVERSION="11" PGDG_REPO="pgdg-redhat-repo-latest.noarch.rpm" PGDG_REPO_DISA
     BACKREST_VERSION="2.13" PG_MODE="primary" PG_PRIMARY_PORT="5432"  PG_PRIMARY_USER="postgres" \
     PG_ROOT_PASSWORD="" PROTEAX_CORE_6_HOME="/opt/Biochemfusion/PgCartridge/v6/"    
 
-RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/${PGVERSION}/redhat/rhel-7-x86_64/${PGDG_REPO}
+RUN rpm -Uvh https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
 RUN yum -y update \
  && yum -y install epel-release \
